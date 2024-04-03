@@ -21,7 +21,7 @@ void ExibirOpcoesDoMenu()
     int opc = int.Parse(Console.ReadLine());
     switch (opc)
     {
-        case 1:
+        case1 RegistrarBanda():
             Console.WriteLine("A opção escolhida foi " + opc);
             break;
         case 2:
@@ -44,3 +44,16 @@ void ExibirOpcoesDoMenu()
 
 ExibirLogo();
 ExibirOpcoesDoMenu();
+
+void RegistrarBanda()
+{
+    Console.Clear();
+    Console.WriteLine("Registro de bandas");
+    Console.Write("Digite o nome da banda que deseja registrar: ");
+    string nomeDaBanda = Console.ReadLine()!;
+    listaDasBandas.Add(nomeDaBanda);
+    Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
+    Console.Clear();
+    Thread.Sleep(2000);
+    ExibirOpcoesDoMenu();
+}
