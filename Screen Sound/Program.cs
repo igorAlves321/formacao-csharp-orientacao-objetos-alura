@@ -1,11 +1,12 @@
 ﻿// Screen Sound
-string mensagemDeBoasVindas = "Boas vindas ao Screen Sound";
+
+const string mensagemDeBoasVindas = "Boas vindas ao Screen Sound";
 List<string> listaDasBandas = new List<string> { "U2", "The Beatles", "Calypso" };
 
 void ExibirLogo()
 {
     Console.WriteLine(@"
-░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
+░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗ ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
 ");
     Console.WriteLine(mensagemDeBoasVindas);
 }
@@ -19,13 +20,14 @@ void ExibirOpcoesDoMenu()
     Console.WriteLine("Digite -1 para sair");
     Console.Write("Digite a sua opção: ");
     int opc = int.Parse(Console.ReadLine());
+
     switch (opc)
     {
-        case1 RegistrarBanda():
-            Console.WriteLine("A opção escolhida foi " + opc);
+        case 1:
+            RegistrarBanda();
             break;
         case 2:
-            Console.WriteLine("A opção escolhida foi " + opc);
+            MostrarBandasRegistradas();
             break;
         case 3:
             Console.WriteLine("A opção escolhida foi " + opc);
@@ -42,13 +44,11 @@ void ExibirOpcoesDoMenu()
     }
 }
 
-ExibirLogo();
-ExibirOpcoesDoMenu();
-
 void RegistrarBanda()
 {
     Console.Clear();
     Console.WriteLine("Registro de bandas");
+    Console.WriteLine("**********************");
     Console.Write("Digite o nome da banda que deseja registrar: ");
     string nomeDaBanda = Console.ReadLine()!;
     listaDasBandas.Add(nomeDaBanda);
@@ -57,3 +57,19 @@ void RegistrarBanda()
     Thread.Sleep(2000);
     ExibirOpcoesDoMenu();
 }
+
+void MostrarBandasRegistradas()
+{
+    Console.Clear();
+    Console.WriteLine("************************************");
+    Console.WriteLine("Exibindo todas as bandas registradas");
+    Console.WriteLine("************************************");
+    for (int i = 0; i < listaDasBandas.Count; i++)
+    {
+        Console.WriteLine($"Banda: {listaDasBandas[i]}");
+    }
+    ExibirOpcoesDoMenu();
+}
+
+ExibirLogo();
+ExibirOpcoesDoMenu();
