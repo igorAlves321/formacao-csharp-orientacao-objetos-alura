@@ -6,7 +6,6 @@ void ExibirLogo()
 {
     Console.WriteLine(@"
 ░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
-... (restante do logotipo) ...
 ");
     Console.WriteLine(mensagemDeBoasVindas);
 }
@@ -18,17 +17,17 @@ void ExibirOpcoesDoMenu()
     Console.WriteLine("Digite 3 para avaliar uma banda");
     Console.WriteLine("Digite 4 para exibir a média de uma banda");
     Console.WriteLine("Digite -1 para sair");
-    Console.Write("Digite a sua opção:");
+    Console.Write("Digite a sua opção: ");
     int opc = int.Parse(Console.ReadLine());
-    switch(opc)
+    switch (opc)
     {
-        case:
-        Console.WriteLine("A opção escolhida foi " + opc);
+        case 1:
+            Console.WriteLine("A opção escolhida foi " + opc);
             break;
         case 2:
             Console.WriteLine("A opção escolhida foi " + opc);
             break;
-            case 3:
+        case 3:
             Console.WriteLine("A opção escolhida foi " + opc);
             break;
         case 4:
@@ -36,11 +35,12 @@ void ExibirOpcoesDoMenu()
             break;
         case -1:
             Console.WriteLine("A opção escolhida foi " + opc);
-            defaut:
-            Console.WriteLine("Opção inválida");
+            break;
+        default:
+            Console.WriteLine("Tchau tchau :)");
+            break;
     }
 }
-
 
 ExibirLogo();
 ExibirOpcoesDoMenu();
