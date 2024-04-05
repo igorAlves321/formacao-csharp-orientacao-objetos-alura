@@ -1,9 +1,11 @@
 ﻿class Musica
 {
-    public string nome;
+    public string Nome { get; set; }
     public string artista;
     public int duracao;
     public bool disponivel;
+
+
 
     public void ExibirFichaTecnica()
     {
