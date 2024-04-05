@@ -1,7 +1,7 @@
 ﻿Dictionary<string, string> nomeEsenha = new Dictionary<string, string>
 {
 { "abu", "123456" },
-{ "bob", "abcdef" }
+{ "boaaaaa", "abcdef" }
 };
 Console.Write("Nome de usuário: ");
 string nomeUsuario = Console.ReadLine();
