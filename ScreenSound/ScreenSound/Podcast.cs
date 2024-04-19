@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ScreenSound
+﻿namespace ScreenSound
 {
     public class Podcast
     {
@@ -19,7 +13,6 @@ namespace ScreenSound
             Host = host;
         }
 
-        //código omitido
 
         public void ExibirDetalhes()
         {
@@ -30,13 +23,10 @@ namespace ScreenSound
             }
             Console.WriteLine($"\n\nTotal de episódios: {TotalEpisodios}.");
         }
-    }
 
-
-    public void AdicionarEpisodio(Episodio episodio)
+        public void AdicionarEpisodio(Episodio episodio)
         {
             episodios.Add(episodio);
         }
-
     }
 }
