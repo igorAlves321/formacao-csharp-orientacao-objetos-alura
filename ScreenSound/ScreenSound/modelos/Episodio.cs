@@ -1,5 +1,5 @@
-﻿namespace ScreenSound
-{
+﻿namespace ScreenSound.modelos;
+
     public class Episodio
     {
         private List<string> convidados = new();
@@ -22,4 +22,4 @@
         }
 
     }
-}
+

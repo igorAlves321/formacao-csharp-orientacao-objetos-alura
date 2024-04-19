@@ -1,4 +1,4 @@
-﻿using ScreenSound;
+﻿using ScreenSound.modelos;
 
 public class Musica
 {

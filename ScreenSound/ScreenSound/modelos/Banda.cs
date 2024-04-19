@@ -1,5 +1,5 @@
-﻿namespace ScreenSound
-{
+﻿namespace ScreenSound.modelos;
+
     public class Banda
     {
         private List<Album> albums = new List<Album>();
@@ -25,4 +25,3 @@
             }
         }
     }
-}

@@ -1,4 +1,4 @@
-﻿namespace ScreenSound
+﻿namespace ScreenSound.modelos
 {
     public class Podcast
     {

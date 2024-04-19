@@ -1,4 +1,4 @@
-﻿using ScreenSound;
+﻿using ScreenSound.modelos;
 
 Episodio ep1 = new(1, "Técnicas de facilitação", 45);
 ep1.AdicionarConvidado("Maria");
