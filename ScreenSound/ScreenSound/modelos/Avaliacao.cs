@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ScreenSound.Modelos;
 
-namespace ScreenSound.modelos;
-
-    public class Avaliacao
+internal class Avaliacao
+{
+    public Avaliacao(int nota)
     {
-    public Avaliacao()
-    {
-        
+        Nota = nota;
     }
-    public int Gostei { get; set; }
-    public int NaoGostei { get; set; }
-}
 
+    public int Nota { get; }
+
+    public static Avaliacao Parse(string texto)
+    {
+        int nota = int.Parse(texto);
+        return new Avaliacao(nota);
+    }
+}

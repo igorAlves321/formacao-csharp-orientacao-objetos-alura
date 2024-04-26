@@ -1,11 +1,9 @@
-﻿using ScreenSound.modelos;
+﻿namespace ScreenSound.Modelos; 
 
-namespace ScreenSound.Modelos; 
-
-class Banda
+internal class Banda
 {
     private List<Album> albuns = new List<Album>();
-    private List<Avaliacao> avaliacoes = new List<Avaliacao>();
+    private List<Avaliacao> notas = new List<Avaliacao>();
 
     public Banda(string nome)
     {
@@ -13,38 +11,26 @@ class Banda
     }
 
     public string Nome { get; }
-    public List<Album> Albuns => albuns;
-    public List<Avaliacao> Avaliacoes => avaliacoes;
-
-    public void AdicionarAlbum(Album album)
+    public double Media
     {
+        get
+        {
+            if (notas.Count == 0) return 0;
+            else return notas.Average(a => a.Nota);
+        }
+    }
+    public List<Album> Albuns => albuns;
+
+    public void AdicionarAlbum(Album album) 
+    { 
         albuns.Add(album);
     }
 
-    public void AdicionarAvaliacao(Avaliacao avaliacao)
+    public void AdicionarNota(Avaliacao nota)
     {
-        avaliacoes.Add(avaliacao);
+        notas.Add(nota);
     }
 
-    public int TotalGostei()
-    {
-        int totalGostei = 0;
-        foreach (Avaliacao avaliacao in avaliacoes)
-        {
-            totalGostei += avaliacao.Gostei;
-        }
-        return totalGostei;
-    }
-
-    public int TotalNaoGostei()
-    {
-        int totalNaoGostei = 0;
-        foreach (Avaliacao avaliacao in avaliacoes)
-        {
-            totalNaoGostei += avaliacao.NaoGostei;
-        }
-        return totalNaoGostei;
-    }
     public void ExibirDiscografia()
     {
         Console.WriteLine($"Discografia da banda {Nome}");
